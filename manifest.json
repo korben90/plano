@@ -1,0 +1,42 @@
+{
+  "server": {
+    "app": {
+      "slogan": "We push the web forward"
+    }
+  },
+  "connections": [
+    {
+      "port": 3000,
+      "host": "localhost",
+      "labels": ["api"]
+    }
+  ],
+  "registrations": [
+    {
+      "plugin": {
+        "register": "./User"
+      }
+    },
+    {
+      "plugin": {
+        "register": "Inert"
+      }
+    },
+    {
+      "plugin": {
+        "register": "Vision"
+      }
+    },
+    {
+      "plugin": {
+        "register": "hapi-swagger",
+        "options": {
+          "info": {
+            "title": "Planortho API Documentation",
+            "version": "0.0.1"
+          }
+        }
+      }
+    }
+  ]
+}

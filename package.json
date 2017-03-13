@@ -1,0 +1,22 @@
+{
+  "name": "planortho",
+  "version": "0.0.1",
+  "description": "Manage plannings and reminders for orthophonists",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gaultier Monier",
+  "license": "ISC",
+  "dependencies": {
+    "boom": "^4.2.0",
+    "crypto": "0.0.3",
+    "glue": "^4.1.0",
+    "hapi": "^16.1.0",
+    "hapi-mongoose": "^1.0.1",
+    "hapi-swagger": "^7.6.0",
+    "inert": "^4.1.0",
+    "joi": "^10.2.2",
+    "vision": "^4.1.1"
+  }
+}
