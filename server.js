@@ -1,14 +1,12 @@
+'use strict';
+
 require('app-module-path').addPath(__dirname);
 
 const Hapi = require('hapi');
-//const Inert = require('inert');
-//const Vision = require('vision');
-//const HapiSwagger = require('hapi-swagger');
-//const Pack = require('./package');
 const mongoose = require('mongoose');
 
 var Glue = require('glue');
-var manifest = require('./manifest.json');
+var manifest = require('manifest.json');
 var options = {
     relativeTo: __dirname + '/modules'
 };

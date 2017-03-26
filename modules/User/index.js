@@ -1,7 +1,8 @@
 const Joi = require('Joi');
-var connect = require('./connect');
-var get = require('./get');
-var update = require('./update');
+var connect = require('modules/User/connect');
+var get = require('modules/User/get');
+var update = require('modules/User/update');
+var settings = require('modules/User/settings');
 
 exports.register = function (server, options, next) {
 
@@ -28,6 +29,12 @@ exports.register = function (server, options, next) {
         path: '/users/{id}',
         method: 'PUT',
         config: update.update
+    });
+
+    server.route({
+        path: '/users/{id}/settings',
+        method: 'GET',
+        config: settings.get
     });
 
     next();

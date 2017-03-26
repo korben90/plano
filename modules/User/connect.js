@@ -44,7 +44,7 @@ exports.connect = {
                     if(user == null){
                         return callback(Boom.notFound('No user with these credentials'));
                     }
-                    callback(user);
+                    callback(null, user);
                 });
             }
         ], function (err, results){

@@ -1,7 +1,5 @@
 var Mongoose = require('mongoose'),
     Schema = Mongoose.Schema;
-var User = require('./User');
-var Patient = require('./Patient');
 
 var AppointmentSchema = new Schema({
     user: { type: Schema.Types.ObjectId, ref: 'user', required: true, index: true },
@@ -13,8 +11,5 @@ var AppointmentSchema = new Schema({
     sms_notification_date: { type: Date },
     mail_notification_date: { type: Date }
 });
-var appointment = Mongoose.model('appointment', AppointmentSchema);
 
-module.exports = {
-    Appointment: appointment
-};
+module.exports = Mongoose.model('Appointment', AppointmentSchema, 'Appointment');

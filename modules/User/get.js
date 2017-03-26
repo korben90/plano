@@ -2,7 +2,7 @@ const Joi = require('Joi');
 const async = require('async');
 const Boom = require('boom');
 
-var User = require('../../models/User');
+var User = require('models/User');
 
 exports.get = {
     description: 'Get a user',
@@ -27,7 +27,7 @@ exports.get = {
                     if(user == null){
                         return callback(Boom.notFound('No user with this id'));
                     }
-                    callback(user);
+                    callback(null, user);
                 });
             }
         ], function (err, results){
@@ -55,7 +55,7 @@ exports.getAll = {
                     if(users == null){
                         return callback(Boom.notFound('No users'));
                     }
-                    callback(users);
+                    callback(null, users);
                 });
             }
         ], function (err, results){
