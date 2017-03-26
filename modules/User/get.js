@@ -49,7 +49,6 @@ exports.getAll = {
             function requestDatabase (callback) {
                 // try to find the user thanks to the email and the password given
                 User.find({}, function (err, users) {
-                    console.log(users);
                     if (err) {
                         return callback(err);
                     }

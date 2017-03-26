@@ -9,6 +9,7 @@
   "author": "Gaultier Monier",
   "license": "ISC",
   "dependencies": {
+    "app-module-path": "^2.2.0",
     "boom": "^4.2.0",
     "crypto": "0.0.3",
     "glue": "^4.1.0",

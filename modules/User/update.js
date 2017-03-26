@@ -2,7 +2,7 @@ const Joi = require('Joi');
 const async = require('async');
 const Boom = require('boom');
 
-var User = require('../../models/User');
+var User = require('models/User');
 
 exports.update = {
     description: 'Update a user',
@@ -24,7 +24,7 @@ exports.update = {
         async.waterfall([
             function requestDatabase (callback) {
                 // try to find the user thanks to the email and the password given
-                User.findOne({ _id: user_id }, function (err, user) {
+                User.findOne ({ _id: user_id }, function (err, user) {
                     if (err) {
                         return callback(err);
                     }
@@ -35,7 +35,7 @@ exports.update = {
                 });
             },
             function updateUser (user, callback) {
-                user.update(data, { safe: true }, function (err))
+                //user.update(data, { safe: true }, function (err))
             }
         ], function (err, results){
             if(err) {
